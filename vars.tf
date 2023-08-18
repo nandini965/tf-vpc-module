@@ -3,4 +3,3 @@ variable "env" {}
 variable "tags" {}
 variable "vpc_id" {}
 variable "subnets" {}
-variable "name" {}
