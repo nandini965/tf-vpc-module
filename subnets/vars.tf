@@ -1,4 +1,4 @@
-variable "cidr_block" {}
-variable "env" {}
-variable "tags" {}
 variable "vpc_id" {}
+variable "cidr_block" {}
+variable "tags" {}
+variable "name" {}
