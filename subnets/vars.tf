@@ -3,3 +3,4 @@ variable "cidr_block" {}
 variable "tags" {}
 variable "name" {}
 variable "env" {}
+variable "azs" {}
