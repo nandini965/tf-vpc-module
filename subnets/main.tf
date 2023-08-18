@@ -4,6 +4,6 @@
   cidr_block = "var.cidr_block[count.index]"
 
   tags = {
-    Name = "merge(var.tags, { Name = "${var.env}-${var.name}-subnet-${count.index}" })"
+    Name = merge(var.tags, { Name = "${var.env}-${var.name}-subnet-${count.index}" })
   }
 }
