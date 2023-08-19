@@ -22,7 +22,7 @@ resource "aws_internet_gateway" "igw" {
   tags = merge(var.tags, { Name = "${var.env}-igw}" })
 }
 
-resource "eip" "ngw" {
+resource "aws_eip" "ngw" {
   count = length(var.subnets,["public"].cdir_block)
   vpc = true
   tags = merge (var.tags, { Name = "${var.env}-ngw}" })
