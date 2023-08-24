@@ -30,8 +30,6 @@ resource "aws_eip" "ngw" {
 
 
 
-
-
 resource "aws_nat_gateway" "ngw" {
   count = length(var.subnets["public"].cidr_block)
   allocation_id = aws_eip.ngw[count.index].id
