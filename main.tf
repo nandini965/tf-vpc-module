@@ -52,8 +52,8 @@ resource "aws_nat_gateway" "ngw" {
 
 resource "aws_route" "ngw" {
   count = length(local.all_private_subnet_ids)
-  route_table_id = local.all_private_subnet_ids[count_index]
-  gateway_id = element(aws_nat_gateway.ngw.*.id, count_index)
+  route_table_id = local.all_private_subnet_ids[count.index]
+  gateway_id = element(aws_nat_gateway.ngw.*.id, count.index)
   destination_cidr_block = "0.0.0.0/0"
 }
 
