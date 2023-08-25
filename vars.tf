@@ -4,3 +4,4 @@ variable "tags" {}
 variable "vpc_id" {}
 variable "subnets" {}
 variable "azs" {}
+variable "local" {}
