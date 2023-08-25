@@ -8,5 +8,5 @@ output "subnets_cidr" {
   value = aws_subnet.main.*.cidr_block
 }
   output "vpc" {
-   value = (lookup(lookup(module.vpc, "main", null).subnets, null)
+   value = (lookup(lookup(module.vpc, "main", null), subnets, null)
 }
