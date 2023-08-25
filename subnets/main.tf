@@ -19,3 +19,5 @@
     vpc_id = var.vpc_id
     tags = merge(var.tags, { Name = "${var.env}-${var.name}-igw" })
  }
+
+
