@@ -59,3 +59,15 @@ resource "aws_route" "ngw" {
 output "subnet" {
   value = module.subnets
 }
+resource "aws_vpc_peering_connection" "peer" {
+  peer_owner_id = data.aws_caller_identity.identity.account_id
+  peer_vpc_id   = aws_default_vpc_id
+  vpc_id        = aws_vpc.main.id
+ auto_accept    = true
+  acceptor {
+    allow_remote_vpc_dns_resolution = true
+  }
+  requester {
+    allow_remote_vpc_dns_resolution = true
+  }
+}
