@@ -5,3 +5,4 @@ variable "vpc_id" {}
 variable "subnets" {}
 variable "default_vpc_id" {}
 variable "default_vpc_cidr" {}
+variable "default_vpc_rtid" {}
